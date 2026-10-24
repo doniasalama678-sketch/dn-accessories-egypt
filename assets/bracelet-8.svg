@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900">
+  <defs>
+    <linearGradient id="bg8" x1="0" x2="1"><stop offset="0" stop-color="#f8f1ec"/><stop offset="1" stop-color="#e6d8ce"/></linearGradient>
+    <linearGradient id="gold8" x1="0" x2="1"><stop offset="0" stop-color="#eed380"/><stop offset="1" stop-color="#be8a2a"/></linearGradient>
+  </defs>
+  <rect width="900" height="900" fill="url(#bg8)"/>
+
+  <g transform="translate(140,35)">
+    <path d="M84 660 C 120 592, 130 532, 151 463 C 176 377, 178 301, 196 217 C 214 136, 273 88, 343 86 C 430 84, 503 148, 530 228 C 558 314, 547 414, 501 503 C 455 593, 421 647, 374 704 C 326 759, 238 764, 117 715 C 101 706, 92 690, 84 660Z" fill="#f1d4c2"/>
+    <path d="M185 628 C 252 567, 309 548, 368 542 C 430 536, 489 556, 538 596 C 584 633, 592 691, 563 744 C 520 817, 431 841, 331 838 C 266 836, 204 807, 185 628Z" fill="#f9e6db" opacity="0.72"/>
+  </g>
+
+  <g transform="translate(200,390)">
+    <path d="M45 75 C 91 38, 154 20, 221 20 C 293 20, 364 46, 419 95 C 457 128, 489 170, 499 223 C 510 277, 482 330, 432 354 C 376 382, 306 387, 228 372 C 169 361, 111 334, 71 289 C 31 245, 8 196, 16 149 C 24 111, 28 105, 45 75Z" fill="#f5d4c2" opacity="0.26"/>
+  </g>
+
+  <g transform="translate(250,415)">
+    <path d="M88 20 C 141 1, 207 3, 260 24 C 314 45, 362 81, 391 127 C 420 177, 421 231, 396 279 C 366 336, 310 369, 244 378 C 177 388, 112 374, 70 336 C 31 300, 9 250, 9 198 C 8 123, 30 64, 88 20Z" fill="#f6dfd3" opacity="0.22"/>
+  </g>
+
+  <g transform="translate(290,430)">
+    <path d="M114 0 C 155 -6, 195 2, 229 18 C 273 39, 301 74, 311 115 C 323 163, 311 203, 270 234 C 229 267, 176 285, 127 281 C 86 278, 52 260, 27 232 C 0 202, -1 163, 18 118 C 41 65, 64 19, 114 0Z" fill="url(#gold8)"/>
+    <path d="M91 72 C 128 58, 169 57, 204 74 C 223 84, 239 100, 246 118 C 250 136, 241 152, 224 164 C 200 181, 163 187, 126 181 C 96 176, 67 160, 53 140 C 40 120, 45 91, 91 72Z" fill="#d9ab47" opacity="0.23"/>
+    <path d="M77 101 C 117 91, 150 89, 180 95 C 196 99, 213 108, 223 122" fill="none" stroke="#ebc96e" stroke-width="4" stroke-linecap="round"/>
+    <path d="M101 141 C 130 152, 160 157, 191 157" fill="none" stroke="#ebc96e" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(170,370)">
+    <path d="M133 94 C 164 68, 236 58, 303 76 C 370 95, 419 143, 432 188 C 446 236, 422 295, 376 326 C 321 363, 246 365, 182 346 C 122 328, 79 292, 62 249 C 46 209, 57 168, 133 94Z" fill="#f4d6c7" opacity="0.2"/>
+  </g>
+</svg>
