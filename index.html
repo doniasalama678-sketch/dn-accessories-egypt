@@ -27,7 +27,760 @@
       color: var(--ink);
       font-family: Tahoma, Arial, sans-serif;
       line-height: 1.7;
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="D&N Accessories Egypt — كتالوج إكسسوارات أنيقة مع طلب عبر واتساب والدفع عند الاستلام."
+  />
+  <title>D&N Accessories Egypt | كتالوج الإكسسوارات</title>
+  <style>
+    :root{
+      --ink:#30272a;
+      --muted:#796c70;
+      --rose:#965b66;
+      --rose2:#b77d86;
+      --cream:#fcf8f5;
+      --sand:#f1e5df;
+      --line:#eadbd5;
+      --white:#fff;
+      --gold:#c89f4a;
+      --dark:#1d1a1c;
     }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--cream);
+      color:var(--ink);
+      font-family:Tahoma, Arial, sans-serif;
+      line-height:1.7;
+    }
+    a{color:inherit;text-decoration:none}
+    button,input,textarea,select{font:inherit}
+    img{max-width:100%;display:block}
+    .wrap{
+      width:min(1120px, 92%);
+      margin:auto;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:#fcf8f5ee;
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:12px 0;
+    }
+
+    .brand{
+      font-weight:900;
+      font-size:1.08rem;
+      letter-spacing:.5px;
+    }
+
+    .brand span{
+      color:var(--rose);
+    }
+
+    .navlinks{
+      display:flex;
+      gap:18px;
+      color:var(--ink);
+      font-size:.96rem;
+    }
+
+    .navlinks a{
+      position:relative;
+      opacity:.9;
+    }
+
+    .navlinks a:hover{
+      color:var(--rose);
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      border:0;
+      border-radius:999px;
+      padding:11px 18px;
+      background:var(--rose);
+      color:#fff;
+      font-weight:700;
+      cursor:pointer;
+      transition:.2s ease;
+      box-shadow:0 10px 20px rgba(150,91,102,.15);
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      background:var(--rose2);
+    }
+
+    .btn.secondary{
+      padding:9px 14px;
+      font-size:.9rem;
+      background:var(--rose);
+    }
+
+    .hero{
+      background:
+        radial-gradient(circle at 15% 20%, #f0dede, transparent 35%),
+        linear-gradient(120deg, #fcf8f5, #f4e8e1);
+      padding:48px 0;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      align-items:center;
+      gap:34px;
+    }
+
+    .eyebrow{
+      font-weight:bold;
+      color:var(--rose);
+      letter-spacing:.5px;
+    }
+
+    h1{
+      font-size:clamp(2rem,4.5vw,3.4rem);
+      line-height:1.25;
+      margin:12px 0;
+    }
+
+    .hero p{
+      margin:0 0 18px;
+      color:var(--muted);
+      font-size:1.05rem;
+    }
+
+    .hero-cta{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .hero-art{
+      position:relative;
+      min-height:360px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .hero-art img{
+      width:min(100%, 520px);
+      border-radius:26px;
+      object-fit:cover;
+      box-shadow:0 25px 60px rgba(56,39,44,.12);
+      border:1px solid rgba(150,91,102,.08);
+    }
+
+    .stamp{
+      position:absolute;
+      left:12%;
+      bottom:18px;
+      background:rgba(255,255,255,.8);
+      border:1px solid var(--line);
+      color:var(--rose);
+      padding:10px 16px;
+      border-radius:999px;
+      font-weight:800;
+      font-size:.87rem;
+      backdrop-filter:blur(2px);
+    }
+
+    section{
+      padding:46px 0;
+    }
+
+    .section-head{
+      text-align:center;
+      margin-bottom:24px;
+    }
+
+    .section-head h2{
+      margin:0 0 5px;
+      font-size:1.85rem;
+    }
+
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .filters{
+      display:flex;
+      justify-content:center;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-bottom:22px;
+    }
+
+    .filter{
+      border:1px solid var(--line);
+      background:var(--white);
+      border-radius:99px;
+      padding:8px 15px;
+      cursor:pointer;
+      color:var(--ink);
+      font-weight:600;
+      transition:.18s ease;
+    }
+
+    .filter:hover{
+      border-color:var(--rose);
+      color:var(--rose);
+    }
+
+    .filter.active{
+      background:var(--rose);
+      color:#fff;
+      border-color:var(--rose);
+      box-shadow:0 10px 20px rgba(150,91,102,.15);
+    }
+
+    .products{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:16px;
+    }
+
+    .product{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      overflow:hidden;
+      transition:transform .2s ease, box-shadow .2s ease;
+      display:flex;
+      flex-direction:column;
+      min-height:100%;
+    }
+
+    .product:hover{
+      transform:translateY(-2px);
+      box-shadow:0 14px 28px rgba(56,39,44,.08);
+    }
+
+    .product img{
+      width:100%;
+      height:290px;
+      object-fit:cover;
+      border-bottom:1px solid var(--line);
+      background:#f7f1ee;
+    }
+
+    .product-body{
+      padding:12px 14px 14px;
+      display:grid;
+      gap:10px;
+    }
+
+    .product-body h3{
+      margin:0;
+      font-size:1.02rem;
+      line-height:1.5;
+      color:var(--ink);
+    }
+
+    .meta{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:8px;
+      margin-top:2px;
+    }
+
+    .price{
+      color:var(--rose);
+      font-weight:800;
+      font-size:1rem;
+    }
+
+    .notice{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:12px 15px;
+      color:var(--muted);
+      font-size:.86rem;
+      margin-top:18px;
+      line-height:1.8;
+    }
+
+    .order-area{
+      background:#f4ebe5;
+    }
+
+    .order-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:22px;
+      align-items:start;
+    }
+
+    .panel{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:22px;
+    }
+
+    .panel h3{
+      margin:0 0 12px;
+      font-size:1.35rem;
+    }
+
+    .empty{
+      color:var(--muted);
+      background:#faf5f2;
+      border:1px dashed var(--line);
+      border-radius:12px;
+      padding:16px;
+      font-size:.95rem;
+    }
+
+    .cart-list{
+      display:grid;
+      gap:10px;
+    }
+
+    .cart-item{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      align-items:center;
+      padding:10px 0;
+      border-bottom:1px solid #f3e6e0;
+    }
+
+    .cart-item:last-child{
+      border-bottom:none;
+    }
+
+    .qty{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+
+    .qty button{
+      width:28px;
+      height:28px;
+      border-radius:50%;
+      border:1px solid var(--line);
+      background:#fff;
+      cursor:pointer;
+      font-size:1.1rem;
+      color:var(--ink);
+    }
+
+    .qty button.remove{
+      width:auto;
+      height:auto;
+      border-radius:999px;
+      padding:4px 10px;
+      font-size:.8rem;
+      color:var(--rose);
+      border-color:rgba(150,91,102,.35);
+      background:#fff5f6;
+    }
+
+    .paybox{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:center;
+      border-top:1px solid #f3e6e0;
+      margin-top:12px;
+      padding-top:12px;
+      color:var(--ink);
+      font-weight:700;
+    }
+
+    form{
+      display:grid;
+      gap:12px;
+    }
+
+    .two{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+
+    .field{
+      display:grid;
+      gap:5px;
+    }
+
+    .field label{
+      font-size:.88rem;
+      font-weight:bold;
+    }
+
+    .field input, .field textarea, .field select{
+      width:100%;
+      padding:11px 12px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      background:#fff;
+      color:var(--ink);
+      resize:vertical;
+      min-height:46px;
+    }
+
+    .field input:focus, .field textarea:focus, .field select:focus{
+      outline:2px solid rgba(150,91,102,.12);
+      border-color:var(--rose);
+    }
+
+    .fine{
+      color:var(--muted);
+      font-size:.81rem;
+      margin:0;
+      line-height:1.7;
+    }
+
+    .tips{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+
+    .tip{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px;
+    }
+
+    .tip b{
+      color:var(--rose);
+      display:block;
+      margin-bottom:8px;
+      font-size:1.02rem;
+    }
+
+    .tip p{
+      color:var(--muted);
+      margin:0;
+      line-height:1.8;
+    }
+
+    footer{
+      background:var(--dark);
+      color:#f8eeea;
+      padding:25px 0;
+      font-size:.87rem;
+    }
+
+    .foot{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:15px;
+      flex-wrap:wrap;
+    }
+
+    .foot span{
+      color:#dcb7bd;
+    }
+
+    @media (max-width: 850px){
+      .products{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .hero-grid,.order-grid{grid-template-columns:1fr}
+      .hero-art{min-height:270px}
+      .navlinks{gap:10px}
+      .tips{grid-template-columns:1fr}
+    }
+
+    @media (max-width: 520px){
+      .nav{flex-wrap:wrap}
+      .navlinks{
+        order:3;
+        width:100%;
+        justify-content:center;
+        font-size:.83rem;
+      }
+      .nav .btn{
+        padding:8px 12px;
+        font-size:.83rem;
+      }
+      .hero{
+        padding:34px 0;
+      }
+      .products{
+        grid-template-columns:1fr;
+        gap:10px;
+      }
+      .two{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home">D&N <span>Accessories Egypt</span></a>
+      <nav class="navlinks">
+        <a href="#home">الرئيسية</a>
+        <a href="#catalog">الكتالوج</a>
+        <a href="#tips">نصائح</a>
+        <a href="#order">اطلبي الآن</a>
+      </nav>
+      <a class="btn" href="#order">سلة الطلب <span id="cartCount">0</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">تفاصيل صغيرة… أناقة كبيرة ✨</div>
+          <h1>اختاري إكسسواراتك<br>على ذوقك</h1>
+          <p>
+            كتالوج D&N Accessories Egypt يجمع لكِ أحدث الإكسسوارات الساحرة
+            مع تصميمات أنيقة مناسبة للنهار والليالي والمناسبات الخاصة.
+          </p>
+          <div class="hero-cta">
+            <a class="btn" href="#catalog">تسوقي الآن</a>
+            <a class="btn" href="#order" style="background:#fff;color:var(--rose);border:1px solid var(--line)">اطلبي عبر واتساب</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img
+            src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=1000&q=85"
+            alt="إكسسوارات أنيقة"
+          />
+          <div class="stamp">اختاريها على ذوقك</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>كتالوج الإكسسوارات</h2>
+          <p>اختاري القسم ثم أضيفي القطع التي تعجبكِ إلى الطلب.</p>
+        </div>
+
+        <div class="filters">
+          <button class="filter active" data-filter="all">الكل</button>
+          <button class="filter" data-filter="earrings">حلق</button>
+          <button class="filter" data-filter="necklaces">سلاسل</button>
+          <button class="filter" data-filter="bracelets">أساور</button>
+        </div>
+
+        <div class="products">
+          <article class="product" data-category="bracelets" data-name="إكسسوار ورقة ذهبية">
+            <img loading="lazy" src="assets/bracelet-1.svg" alt="إكسسوار ورقة ذهبية">
+            <div class="product-body">
+              <h3>إكسسوار ورقة ذهبية</h3>
+              <div class="meta">
+                <span class="price">320 ج.م</span>
+                <button class="btn secondary" type="button" data-add>إضافة</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product" data-category="bracelets" data-name="إكسسوار قلب أنيق">
+            <img loading="lazy" src="assets/bracelet-2.svg" alt="إكسسوار قلب أنيق">
+            <div class="product-body">
+              <h3>إكسسوار قلب أنيق</h3>
+              <div class="meta">
+                <span class="price">340 ج.م</span>
+                <button class="btn secondary" type="button" data-add>إضافة</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product" data-category="bracelets" data-name="إكسسوار ذهبية مميزة">
+            <img loading="lazy" src="assets/bracelet-3.svg" alt="إكسسوار ذهبية مميزة">
+            <div class="product-body">
+              <h3>إكسسوار ذهبية مميزة</h3>
+              <div class="meta">
+                <span class="price">360 ج.م</span>
+                <button class="btn secondary" type="button" data-add>إضافة</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product" data-category="bracelets" data-name="إكسسوار بلاك ستايل">
+            <img loading="lazy" src="assets/bracelet-4.svg" alt="إكسسوار بلاك ستايل">
+            <div class="product-body">
+              <h3>إكسسوار بلاك ستايل</h3>
+              <div class="meta">
+                <span class="price">390 ج.م</span>
+                <button class="btn secondary" type="button" data-add>إضافة</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product" data-category="bracelets" data-name="إكسسوار قفل حب">
+            <img loading="lazy" src="assets/bracelet-5.svg" alt="إكسسوار قفل حب">
+            <div class="product-body">
+              <h3>إكسسوار قفل حب</h3>
+              <div class="meta">
+                <span class="price">410 ج.م</span>
+                <button class="btn secondary" type="button" data-add>إضافة</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product" data-category="bracelets" data-name="إكسسوار قلبيات مزدوجة">
+            <img loading="lazy" src="assets/bracelet-6.svg" alt="إكسسوار قلبيات مزدوجة">
+            <div class="product-body">
+              <h3>إكسسوار قلبيات مزدوجة</h3>
+              <div class="meta">
+                <span class="price">430 ج.م</span>
+                <button class="btn secondary" type="button" data-add>إضافة</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product" data-category="bracelets" data-name="إكسسوار إنفينيتي">
+            <img loading="lazy" src="assets/bracelet-7.svg" alt="إكسسوار إنفينيتي">
+            <div class="product-body">
+              <h3>إكسسوار إنفينيتي</h3>
+              <div class="meta">
+                <span class="price">450 ج.م</span>
+                <button class="btn secondary" type="button" data-add>إضافة</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product" data-category="bracelets" data-name="إكسسوار كريستال ذهبية">
+            <img loading="lazy" src="assets/bracelet-8.svg" alt="إكسسوار كريستال ذهبية">
+            <div class="product-body">
+              <h3>إكسسوار كريستال ذهبية</h3>
+              <div class="meta">
+                <span class="price">470 ج.م</span>
+                <button class="btn secondary" type="button" data-add>إضافة</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product" data-category="bracelets" data-name="إكسسوار لوف">
+            <img loading="lazy" src="assets/bracelet-9.svg" alt="إكسسوار لوف">
+            <div class="product-body">
+              <h3>إكسسوار لوف</h3>
+              <div class="meta">
+                <span class="price">500 ج.م</span>
+                <button class="btn secondary" type="button" data-add>إضافة</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product" data-category="bracelets" data-name="إكسسوار ثعبان ذهبي">
+            <img loading="lazy" src="assets/bracelet-10.svg" alt="إكسسوار ثعبان ذهبي">
+            <div class="product-body">
+              <h3>إكسسوار ثعبان ذهبي</h3>
+              <div class="meta">
+                <span class="price">520 ج.م</span>
+                <button class="btn secondary" type="button" data-add>إضافة</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product" data-category="bracelets" data-name="إكسسوار عباءة سوداء أنيقة">
+            <img loading="lazy" src="assets/bracelet-11.svg" alt="إكسسوار عباءة سوداء أنيقة">
+            <div class="product-body">
+              <h3>إكسسوار عباءة سوداء أنيقة</h3>
+              <div class="meta">
+                <span class="price">540 ج.م</span>
+                <button class="btn secondary" type="button" data-add>إضافة</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product" data-category="bracelets" data-name="إكسسوار أنيقة مع شال">
+            <img loading="lazy" src="assets/bracelet-12.svg" alt="إكسسوار أنيقة مع شال">
+            <div class="product-body">
+              <h3>إكسسوار أنيقة مع شال</h3>
+              <div class="meta">
+                <span class="price">560 ج.م</span>
+                <button class="btn secondary" type="button" data-add>إضافة</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product" data-category="earrings" data-name="حلقات كروشيه ذهبية">
+            <img loading="lazy" src="assets/earrings-13.svg" alt="حلقات كروشيه ذهبية">
+            <div class="product-body">
+              <h3>حلقات كروشيه ذهبية</h3>
+              <div class="meta">
+                <span class="price">590 ج.م</span>
+                <button class="btn secondary" type="button" data-add>إضافة</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product" data-category="earrings" data-name="حلقات ثعبان ذهبي">
+            <img loading="lazy" src="assets/earrings-14.svg" alt="حلقات ثعبان ذهبي">
+            <div class="product-body">
+              <h3>حلقات ثعبان ذهبي</h3>
+              <div class="meta">
+                <span class="price">610 ج.م</span>
+                <button class="btn secondary" type="button" data-add>إضافة</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product" data-category="earrings" data-name="أقراط ماسية ذهبية">
+            <img loading="lazy" src="assets/earrings-15.svg" alt="أقراط ماسية ذهبية">
+            <div class="product-body">
+              <h3>أقراط ماسية ذهبية</h3>
+              <div class="meta">
+                <span class="price">650 ج.م</span>
+                <button class="btn secondary" type="button" data-add>إضافة</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product" data-category="earrings" data-name="أقراط ذهبية أنيقة">
+            <img loading="lazy" src="assets/earrings-16.svg" alt="أقراط ذهبية أنيقة">
+            <div class="product-body">
+              <h3>أقراط ذهبية أنيقة</h3>
+              <div class="meta">
+                <span class="price">690 ج.م</span>
+                <button class="btn secondary" type="button" data-add>إضافة</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product" data-category="earrings" data-name="حلقات مجدولة ذهبية">
+            <img loading="lazy" src="assets/earrings-17.svg" alt="حلقات مجدولة ذهبية">
+            <div class="product-body">
+              <h3>حلقات مجدولة ذهبية</h3>
+              <div class="meta">
+                <span class="price">710 ج.م</span>
+                <button class="btn secondary" type="button" data-add>إضافة</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product" data-category="earrings" data-name="حلقتان دوائر ذهبية">
+            <img loadi    }
 
     img { max-width: 100%; display: block; }
     a { color: inherit; text-decoration: none; }
