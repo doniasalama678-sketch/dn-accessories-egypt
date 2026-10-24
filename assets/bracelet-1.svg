@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900">
+  <defs>
+    <linearGradient id="bg1" x1="0" x2="1"><stop offset="0" stop-color="#f5f0eb"/><stop offset="1" stop-color="#e6d9cf"/></linearGradient>
+    <linearGradient id="gold" x1="0" x2="1"><stop offset="0" stop-color="#e7c77a"/><stop offset="1" stop-color="#b8892f"/></linearGradient>
+  </defs>
+  <rect width="900" height="900" fill="url(#bg1)"/>
+  <g opacity="0.35">
+    <circle cx="130" cy="110" r="100" fill="#f2e4d8"/>
+    <circle cx="790" cy="760" r="130" fill="#eedfcf"/>
+  </g>
+
+  <g transform="translate(220,25)">
+    <path d="M90 650 C 70 600, 75 540, 120 480 C 150 445, 160 400, 170 330 C 185 240, 245 190, 335 185 C 420 180, 455 225, 470 300 C 485 380, 475 465, 455 516 C 429 584, 410 640, 387 690 C 350 680, 290 675, 240 678 C 180 680, 130 670, 90 650Z" fill="#f0d4c3"/>
+    <path d="M148 680 C 155 620, 178 558, 213 522 C 250 486, 282 470, 312 466 C 339 463, 363 464, 382 472 C 362 543, 298 627, 228 681 Z" fill="#f7e5d8" opacity="0.7"/>
+  </g>
+
+  <g transform="translate(205,500)">
+    <path d="M20 0 C 150 -15, 260 -10, 350 0 C 375 5, 400 18, 406 46 C 415 90, 390 108, 350 116 L 260 112 C 175 108, 88 109, 51 97 C 9 82, -12 55, 20 0Z" fill="#f8c9b4" opacity="0.65"/>
+    <path d="M70 90 C 165 170, 260 172, 330 90" fill="none" stroke="#d5a389" stroke-width="7" stroke-linecap="round" opacity="0.7"/>
+  </g>
+
+  <g transform="translate(200,180)">
+    <path d="M230 260 C 250 180, 300 140, 335 140 C 367 140, 388 165, 402 215 C 417 269, 410 325, 390 362 C 370 402, 339 430, 304 450 C 266 472, 235 483, 204 461 C 174 438, 156 403, 155 369 C 155 338, 170 307, 190 286 C 205 269, 218 262, 230 260Z" fill="#f3d0ba" opacity="0.7"/>
+  </g>
+
+  <g transform="translate(180,380)">
+    <path d="M65 95 C 132 25, 235 18, 286 42 C 340 67, 375 118, 383 160 C 392 204, 378 251, 329 276 C 273 306, 210 312, 154 302 C 86 291, 52 255, 41 207 C 27 150, 37 118, 65 95Z" fill="#f0d1bf" opacity="0.32"/>
+    <path d="M182 72 C 160 94, 138 122, 134 155 C 129 199, 155 238, 175 250 C 195 263, 228 266, 257 250 C 282 235, 305 204, 306 167 C 307 124, 285 87, 247 70 C 225 59, 196 60, 182 72Z" fill="#f5dacc" opacity="0.6"/>
+  </g>
+
+  <g transform="translate(190,350)">
+    <path d="M20 85 C 72 35, 118 20, 176 16 C 236 12, 299 24, 348 68 C 387 102, 412 146, 414 204 C 415 255, 390 299, 328 328 C 274 353, 206 359, 145 342 C 88 326, 42 295, 32 246 C 17 180, 8 122, 20 85Z" fill="#f3c7b4" opacity="0.45"/>
+  </g>
+
+  <g transform="translate(245,480)">
+    <path d="M173 105 C 170 59, 170 32, 136 8 C 110 -11, 64 1, 49 41 C 38 72, 44 108, 67 130 C 91 151, 130 142, 145 133 C 160 124, 170 118, 173 105Z" fill="url(#gold)" transform="rotate(-5 150 90)"/>
+    <path d="M40 110 C 95 62, 159 52, 224 64 C 256 69, 287 81, 316 99 C 309 130, 289 151, 259 170 C 229 190, 189 196, 150 196 C 111 196, 75 186, 52 164 C 34 146, 28 127, 40 110Z" fill="url(#gold)"/>
+    <path d="M75 110 C 91 97, 108 91, 126 92 C 143 94, 156 98, 170 114 C 156 125, 143 131, 129 134 C 110 138, 92 132, 75 110Z" fill="#d09f39" opacity="0.35"/>
+    <path d="M133 80 C 155 123, 155 141, 153 170 C 152 188, 164 194, 178 190 C 208 182, 233 164, 252 139" fill="none" stroke="#d9b261" stroke-width="4" stroke-linecap="round"/>
+    <path d="M172 69 C 205 87, 221 117, 220 152" fill="none" stroke="#d9b261" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(250,418)">
+    <path d="M180 0 L 245 65 L 180 130 L 120 65Z" fill="none" stroke="#b8862f" stroke-width="2" opacity="0.3"/>
+    <path d="M215 110 C 236 86, 247 61, 247 36 C 247 16, 234 2, 215 0 C 192 1, 183 18, 178 34 C 172 54, 171 81, 195 98 C 204 104, 210 108, 215 110Z" fill="url(#gold)"/>
+    <path d="M180 8 C 164 26, 160 45, 159 61 C 158 77, 164 88, 176 96 C 159 103, 134 100, 116 92 C 96 82, 90 66, 93 49 C 97 30, 115 12, 137 7 C 154 4, 172 5, 180 8Z" fill="url(#gold)"/>
+    <path d="M206 20 C 221 35, 228 52, 224 71 C 220 92, 203 109, 180 118" fill="none" stroke="#d3a64b" stroke-width="2"/>
+    <path d="M104 72 C 129 92, 155 104, 190 106" fill="none" stroke="#d3a64b" stroke-width="2"/>
+  </g>
+
+  <g transform="translate(175,480)">
+    <path d="M30 70 C 60 36, 98 17, 143 14 C 200 9, 263 26, 306 70 C 327 91, 341 117, 345 151 C 349 178, 339 205, 318 224 C 297 242, 268 252, 227 257 C 180 262, 137 256, 99 237 C 59 217, 40 190, 30 152 C 21 118, 20 95, 30 70Z" fill="none" stroke="#7a4a26" stroke-width="0" opacity="0"/>
+  </g>
+</svg>
